@@ -1,0 +1,23 @@
+{
+  "name": "literaturemining.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/literaturemining/literaturemining.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/literaturemining/literaturemining.github.io/issues"
+  },
+  "homepage": "https://github.com/literaturemining/literaturemining.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
