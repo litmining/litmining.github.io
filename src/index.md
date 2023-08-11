@@ -3,11 +3,11 @@
 
 Here's our suggested workflow for meta-research, along with the tools and output locations that we've developed. 
 
-![](../images/workflow.png)
+![](workflow.png)
 
 **Figure explanation:**
-- Our tool [**pubget**]() performs the tasks of collecting documents and extracting content
-- The corpera created by pubget can be stored in a dedicated [**OSF project**](osf.io/d2qbh/).
+- Our tool [**pubget**](https://neuroquery.github.io/pubget/pubget.html) performs the tasks of collecting documents and extracting content
+- The corpera created by pubget can be stored in a dedicated [**OSF project**](https://osf.io/d2qbh/).
 - Our tool [**labelbuddy**](https://jeromedockes.github.io/labelbuddy/labelbuddy/current/), can be used to manually annotate papers.
 - We have an open repository of [**labelbuddy annotations**](https://litmining.github.io/labelbuddy-annotations/overview.html), where researchers can re-use, update, and add new annotations.
 - Our tools [**pubget**](https://neuroquery.github.io/pubget/pubget.html), and [**pubextract**](https://github.com/neurodatascience/pubextract) can be used to automatically extract information.
