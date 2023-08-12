@@ -1,14 +1,20 @@
-<h1>Literature mining</h1>
-<p>Here's our suggested workflow for meta-research, along with the tools and output locations that we've developed.</p>
+<h1>Mining the biomedical literature</h1>
+<p>The biomedical literature comprises millions of articles and is expanding quickly.
+Due to this overwhelming size, using it efficiently often involves systematic or automated methods, collectively known as <em>text-mining</em>.
+A text-mining project involves several steps: finding relevant articles, downloading them, extracting their text, extracting information from the text and finally running the main analysis which yields scientific insights.
+More often than not, the first steps of this process -- data collection and curation -- take a frustrating amount of time and effort, and are performed in a way that is difficult to reproduce or extend later.</p>
+<p>Here, we describe useful tools and a simple workflow that make text-mining of the biomedical literature easier, more transparent and more fun.
+We hope to help you streamline the first tedious steps of your text-mining project and focus on the part you care about: extracting and analyzing high-quality information from text, rather than downloading, parsing and pre-processing thousands of articles.</p>
+<p>Here is an overview of our suggested workflow, along with the tools we offer and possible places to store the output of each step.</p>
 <p><img src="workflow.png" alt=""></p>
 <p><strong>Figure explanation:</strong></p>
 <ul>
-<li>Our tool <a href="https://neuroquery.github.io/pubget/pubget.html"><strong>pubget</strong></a> performs the tasks of collecting documents and extracting content</li>
-<li>The corpera created by pubget can be stored in a dedicated <a href="https://osf.io/d2qbh/"><strong>OSF project</strong></a>.</li>
-<li>Our tool <a href="https://jeromedockes.github.io/labelbuddy/labelbuddy/current/"><strong>labelbuddy</strong></a>, can be used to manually annotate papers.</li>
+<li>Our tool <a href="https://neuroquery.github.io/pubget/pubget.html"><strong>pubget</strong></a> performs the tasks of collecting documents and extracting their content.</li>
+<li>The corpora created by pubget can be stored in a dedicated <a href="https://osf.io/d2qbh/"><strong>OSF project</strong></a>.</li>
+<li>Our tool <a href="https://jeromedockes.github.io/labelbuddy/labelbuddy/current/"><strong>labelbuddy</strong></a> can be used to manually annotate papers.</li>
 <li>We have an open repository of <a href="https://litmining.github.io/labelbuddy-annotations/overview.html"><strong>labelbuddy annotations</strong></a>, where researchers can re-use, update, and add new annotations.</li>
-<li>Our tools <a href="https://neuroquery.github.io/pubget/pubget.html"><strong>pubget</strong></a>, and <a href="https://github.com/neurodatascience/pubextract"><strong>pubextract</strong></a> can be used to automatically extract information.</li>
-<li>For the step of analyzing the data, each project would have its own code (&quot;custom code&quot;), which we hope would be tracked and shared in its own repository on GitHub or elsewhere (&quot;GitHub repo&quot;).</li>
+<li>Our tools <a href="https://neuroquery.github.io/pubget/pubget.html"><strong>pubget</strong></a> and <a href="https://github.com/neurodatascience/pubextract"><strong>pubextract</strong></a> can be used to automatically extract information.</li>
+<li>For the step of analyzing the data, each project can have its own code (&quot;custom code&quot;), which we hope would be tracked and shared in its own repository on GitHub or elsewhere (&quot;GitHub repo&quot;).</li>
 </ul>
 <!-- ## Steps for using our tools in a literature-mining project
 ### Collect documents and extract content: pubget
@@ -20,7 +26,7 @@
 ### Automatically extract information: pubget and pubextract
 
 
-### Analyse data: Custom code
+### Analyze data: Custom code
 
 
 ### Store outputs: OSF project and labelbuddy-annotations -->
