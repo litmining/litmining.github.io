@@ -1,5 +1,5 @@
 module.exports = config => {
-    config.addPassthroughCopy("src/*.png");
+    config.addPassthroughCopy("src/*.svg");
     return {
         dir: {
             input: "src",
