@@ -3,7 +3,7 @@
 
 Here's our suggested workflow for meta-research, along with the tools and output locations that we've developed. 
 
-![](workflow.png)
+![](workflow.svg)
 
 **Figure explanation:**
 - Our tool [**pubget**](https://neuroquery.github.io/pubget/pubget.html) performs the tasks of collecting documents and extracting content
