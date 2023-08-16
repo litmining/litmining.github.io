@@ -79,22 +79,6 @@ Here is an overview of the organization we suggest; more technical details are p
 ### Add a project to the labelbuddy-annotations repository
 
 ### Use your text corpus and manual annotations for analysis
+
+### Distribute your code & analysis
  
- 
-<!-- ## Steps for using our tools in a literature-mining project
-### Collect documents and extract content: pubget
-
-
-### Manually annotate information: labelbuddy
-
-
-### Automatically extract information: pubget and pubextract
-
-
-### Analyze data: Custom code
-
-
-### Store outputs: OSF project and labelbuddy-annotations -->
-
-
-
