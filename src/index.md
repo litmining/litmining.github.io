@@ -15,7 +15,8 @@ We hope to help you streamline the first tedious steps of your text-mining proje
 
 Here is an overview of our suggested workflow, along with the tools we offer and possible places to store the output of each step.
 
-![Overview of the workflow, described in the text below](/images/workflow.png)
+{% include "partials/workflow_figure.svg" %}
+<!-- ![Overview of the workflow, described in the text below](/images/workflow.png) -->
 
 **Figure explanation:**
 - Our tool [**pubget**](https://neuroquery.github.io/pubget/) performs the tasks of collecting documents and extracting their content.
