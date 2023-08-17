@@ -1,4 +1,8 @@
-# Mining the biomedical literature
+---
+title: Mining the biomedical literature
+summary: A set of tools and resources to easily collect and prepare data for text-mining the biomedical scientific literature. Skip the tedious data collection and wrangling and focus on information extraction and analysis! 
+layout: layouts/home.html
+---
 
 The biomedical literature comprises millions of articles and is expanding quickly.
 Due to this overwhelming size, using it efficiently often involves systematic or automated methods, collectively known as _text-mining_.
@@ -11,7 +15,7 @@ We hope to help you streamline the first tedious steps of your text-mining proje
 
 Here is an overview of our suggested workflow, along with the tools we offer and possible places to store the output of each step.
 
-![Overview of the workflow, described in the text below](workflow.png)
+![Overview of the workflow, described in the text below](/images/workflow.png)
 
 **Figure explanation:**
 - Our tool [**pubget**](https://neuroquery.github.io/pubget/) performs the tasks of collecting documents and extracting their content.
