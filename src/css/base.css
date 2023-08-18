@@ -1,0 +1,51 @@
+body {
+    font-family: var(--font-base);
+    font-size: var(--size-1);
+}
+
+h1,
+h3,
+h3,
+h4 {
+    line-height: 1;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--size-8);
+}
+
+h2 {
+    font-size: var(--size-4);
+}
+
+h3 {
+    font-size: var(--size-3);
+}
+
+h4 {
+    font-size: var(--size-2);
+}
+
+code {
+    font-family: var(--font-mono);
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre;
+    background-color: var(--color-code-bg);
+    padding: var(--size-0);
+    border-radius: var(--size-small-4);
+}

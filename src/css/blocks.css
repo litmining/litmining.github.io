@@ -1,0 +1,7 @@
+.prose {
+    --wrapper-max-width: 55rem;
+}
+
+.header {
+    font-size: var(--size-2);
+}

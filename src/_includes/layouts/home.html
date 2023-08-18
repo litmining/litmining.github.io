@@ -1,22 +1,26 @@
+{% set assetHash = global.randomString() %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/global.css?{{ assetHash }}" />
 </head>
 
 <body>
     <main>
-        <header>
-            <h1>{{ title }}</h1>
-            <p>
-                {{ summary }}
-            </p>
-        </header>
-        <article>
-            {{ content | safe }}
-        </article>
+        <div class="wrapper">
+            <header class="[ region flow ] header">
+                <h1>{{ title }}</h1>
+                <p>
+                    {{ summary }}
+                </p>
+            </header>
+            <article class="[ wrapper region flow ] prose">
+                {{ content | safe }}
+            </article>
+        </div>
     </main>
 </body>
 

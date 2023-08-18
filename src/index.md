@@ -54,8 +54,13 @@ Conveniently, pubget can generate JSON files containing the text it downloaded, 
 Therefore, we can start annotating our articles very easily:
 
 ```
-pubget run -q "zika[Abstract]" --labelbuddy --alias zika_papers ./pubget_data
-labelbuddy ./zika.labelbuddy --import-docs ./pubget_data/zika_papers/subset_allArticles_labelbuddyData/documents_00000.jsonl
+pubget run -q "zika[Abstract]" \
+           --labelbuddy        \
+           --alias zika_papers \
+           ./pubget_data
+cd ./pubget_data/zika_papers/subset_allArticles_labelbuddyData/
+
+labelbuddy ./zika.labelbuddy --import-docs documents_00001.jsonl
 labelbuddy ./zika.labelbuddy
 ```
 

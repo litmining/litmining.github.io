@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "build": "npx @11ty/eleventy",
-      "serve": "npx @11ty/eleventy --serve"
-
+    "start": "concurrently 'npm run serve' 'npm run css -- --watch'",
+    "serve": "npx @11ty/eleventy --serve",
+    "css": "npx postcss src/css/global.css -o _site/css/global.css",
+    "build": "NODE_ENV=production npx @11ty/eleventy && NODE_ENV=production npm run css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,11 @@
   },
   "homepage": "https://github.com/literaturemining/literaturemining.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "concurrently": "^8.2.0",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
   }
 }
