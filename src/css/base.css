@@ -44,7 +44,6 @@ code {
 
 pre {
     overflow-x: auto;
-    white-space: pre;
     background-color: var(--color-code-bg);
     padding: var(--size-0);
     border-radius: var(--size-small-4);

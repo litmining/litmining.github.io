@@ -58,6 +58,7 @@ pubget run -q "zika[Abstract]" \
            --labelbuddy        \
            --alias zika_papers \
            ./pubget_data
+
 cd ./pubget_data/zika_papers/subset_allArticles_labelbuddyData/
 
 labelbuddy ./zika.labelbuddy --import-docs documents_00001.jsonl
