@@ -520,7 +520,7 @@
    height="7701"
    id="rect331" />
         <path
-   fill="rgb(255,255,255)"
+   fill="rgba(255,255,255,0)"
    stroke="none"
    d="M 0,0 L 15000,0 15000,7700 0,7700 0,0 Z"
    id="path333" />

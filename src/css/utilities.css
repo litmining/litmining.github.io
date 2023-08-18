@@ -2,11 +2,13 @@
     max-width: var(--wrapper-max-width, 70rem);
     margin-left: auto;
     margin-right: auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
 }
 
 .region {
-    padding-top: var(--size-2);
-    padding-bottom: var(--size-2);
+    padding-top: var(--region-padding, var(--size-2));
+    padding-bottom: var(--region-padding, var(--size-2));
 }
 
 .flow > * + * {

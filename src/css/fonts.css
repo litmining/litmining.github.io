@@ -1,50 +1,28 @@
 @font-face {
-    font-family: 'NotoSans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/NotoSans-Regular.woff2') format('woff2');
+    font-family: GentiumPlusW;
+    src: url(/fonts/GentiumPlus-Regular.woff2);
 }
 
 @font-face {
-    font-family: 'NotoSans';
+    font-family: GentiumPlusW;
     font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/NotoSans-Italic.woff2') format('woff2');
+    src: url(/fonts/GentiumPlus-Italic.woff2);
 }
 
 @font-face {
-    font-family: 'NotoSans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/NotoSans-Bold.woff2') format('woff2');
+	  font-family: GentiumPlusW;
+	  font-weight: bold;
+	  src: url(/fonts/GentiumPlus-Bold.woff2);
 }
 
 @font-face {
-    font-family: 'NotoSans';
-    font-style: italic;
-    font-weight: 700;
-    src: url('/fonts/NotoSans-BoldItalic.woff2') format('woff2');
+	  font-family: GentiumPlusW;
+	  font-weight: bold;
+	  font-style: italic;
+	  src: url(/fonts/GentiumPlus-BoldItalic.woff2);
 }
 
 @font-face {
-    font-family: 'NotoSans';
-    font-style: normal;
-    font-weight: 900;
-    src: url('/fonts/NotoSans-Black.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'NotoSans';
-    font-style: italic;
-    font-weight: 900;
-    src: url('/fonts/NotoSans-BlackItalic.woff2') format('woff2');
-}
-
-
-
-@font-face {
-    font-family: 'NotoSansMono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/NotoSansMono-VariableFont.woff2') format('woff2');
+    font-family: Inconsolata;
+    src: url(/fonts/Inconsolata-Regular.woff2);
 }

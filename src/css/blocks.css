@@ -3,5 +3,11 @@
 }
 
 .header {
+    padding-top: var(--size-8);
+    padding-bottom: var(--size-4);
     font-size: var(--size-2);
+}
+
+.header > h1 {
+    margin-bottom: var(--size-4);
 }
