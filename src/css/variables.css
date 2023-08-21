@@ -1,6 +1,6 @@
 :root {
-    --font-base: "GentiumPlusW", sans-serif;
-    --font-display: "GentiumPlusW", sans-serif;
+    --font-base: "GentiumPlusW", serif;
+    --font-display: "GentiumPlusW", serif;
     --font-mono: "Inconsolata", monospace;
 
     --color-dark: #1d1d1d;

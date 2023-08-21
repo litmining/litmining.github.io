@@ -1,18 +1,21 @@
 @font-face {
     font-family: GentiumPlusW;
     src: url(/fonts/GentiumPlus-Regular.woff2);
+    font-display: swap;
 }
 
 @font-face {
     font-family: GentiumPlusW;
     font-style: italic;
     src: url(/fonts/GentiumPlus-Italic.woff2);
+    font-display: swap;
 }
 
 @font-face {
 	  font-family: GentiumPlusW;
 	  font-weight: bold;
 	  src: url(/fonts/GentiumPlus-Bold.woff2);
+    font-display: swap;
 }
 
 @font-face {
@@ -20,9 +23,11 @@
 	  font-weight: bold;
 	  font-style: italic;
 	  src: url(/fonts/GentiumPlus-BoldItalic.woff2);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Inconsolata;
     src: url(/fonts/Inconsolata-Regular.woff2);
+    font-display: swap;
 }

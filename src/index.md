@@ -1,6 +1,7 @@
 ---
 title: Mining the biomedical scientific literature
 summary: We present a set of tools and resources to easily collect and prepare data for text-mining the bio­medical scientific literature. Skip the tedious data collection and wrangling and focus on information extraction and analysis! 
+description: Set of tools and workflow for easy and efficient text-mining of the biomedical scientific literature.
 layout: layouts/home.html
 ---
 
