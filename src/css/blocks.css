@@ -1,7 +1,7 @@
 .header {
     margin-top: var(--leading-2);
     margin-bottom: var(--leading-2);
-    font-size: var(--size-1);
+    font-size: var(--header-size);
     font-style: italic;
 }
 
