@@ -1,0 +1,95 @@
+.workflow-figure {
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-auto-flow: row;
+    gap: 0 var(--size-small-3);
+    align-items: baseline;
+    --item-border-color: #00000044;
+    --item-border-size: 2px;
+}
+
+.workflow-figure > div  {
+    border: var(--item-border-size) solid var(--item-border-color);
+    padding-left: var(--size-0);
+    padding-right: var(--size-0);
+    padding-top: var(--size-small-2);
+    padding-bottom: var(--size-small-2);
+    align-self: stretch;
+    border-radius: var(--size-small-5);
+}
+
+.workflow-figure > .workflow-header {
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: var(--size-1);
+}
+
+.workflow-figure > :is(.workflow-arrow, .workflow-empty){
+    border: none;
+    padding: 0;
+    justify-self: center;
+}
+
+.workflow-figure > .manual-annotation {
+    border-bottom: none;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.workflow-figure > .automatic-extraction  {
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.workflow-figure > .automatic-extraction.workflow-task  {
+    border-top: none;
+}
+
+.workflow-figure > .border-bottom {
+    border-top: none;
+    border-radius: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+.workflow-figure > .workflow-sides {
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.workflow-figure > .and-or {
+    grid-row-end: span 2;
+    padding: 0;
+}
+
+.workflow-figure fieldset {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    border: none;
+    border-top: var(--item-border-size) solid var(--item-border-color);
+}
+
+.workflow-figure legend {
+    padding: 0;
+    padding-left: 1ch;
+    padding-right: 1ch;
+}
+
+.workflow-figure > .step {
+    background-color: #ffb34480;
+    --item-border-color: #ab6600ff;
+}
+.workflow-figure > .tool {
+    background-color: #88e6c080;
+    --item-border-color: #00985aff;
+}
+.workflow-figure > .location {
+    background-color: #c088e680;
+    --item-border-color: #9226d9ff;
+}

@@ -1,0 +1,25 @@
+
+:root {
+    --line-height: 1.4;
+    --h3-line-height: 1.05;
+    --leading: 1.867rem;
+    --leading-half: 0.933rem;
+    --leading-1: 1.867rem;
+    --leading-2: 3.733rem;
+    --leading-3: 5.600rem;
+    --size-small-5: 0.316rem;
+    --size-small-4: 0.422rem;
+    --size-small-3: 0.562rem;
+    --size-small-2: 0.750rem;
+    --size-small-1: 1.000rem;
+    --size-0: 1.333rem;
+    --size-1: 1.778rem;
+    --size-2: 2.370rem;
+    --size-3: 3.160rem;
+    --size-4: 4.214rem;
+    --size-5: 5.619rem;
+    --size-6: 7.492rem;
+    --size-7: 9.989rem;
+    --size-8: 13.318rem;
+    --border-radius: 0.316rem;
+}

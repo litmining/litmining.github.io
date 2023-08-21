@@ -11,17 +11,15 @@
 
 <body>
     <main>
-        <div class="wrapper">
-            <header class="header">
+            <header class="wrapper header">
                 <h1>{{ title }}</h1>
                 <p>
                     {{ summary }}
                 </p>
             </header>
-            <article class="[ wrapper region flow ] prose">
+            <article class="wrapper region">
                 {{ content | safe }}
             </article>
-        </div>
     </main>
 </body>
 

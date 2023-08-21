@@ -1,6 +1,6 @@
 ---
-title: Mining the biomedical literature
-summary: We present a set of tools and resources to easily collect and prepare data for text-mining the biomedical scientific literature. Skip the tedious data collection and wrangling and focus on information extraction and analysis! 
+title: Mining the biomedical scientific literature
+summary: We present a set of tools and resources to easily collect and prepare data for text-mining the bio­medical scientific literature. Skip the tedious data collection and wrangling and focus on information extraction and analysis! 
 layout: layouts/home.html
 ---
 
@@ -15,20 +15,16 @@ We hope to help you streamline the first tedious steps of your text-mining proje
 
 Here is an overview of our suggested workflow, along with the tools we offer and possible places to store the output of each step.
 
-{% include "partials/workflow_figure.svg" %}
-<!-- ![Overview of the workflow, described in the text below](/images/workflow.png) -->
+{% include "partials/workflow.html" %}
 
-**Figure explanation:**
-- Our tool [**pubget**](https://neuroquery.github.io/pubget/) performs the tasks of collecting documents and extracting their content.
-- The corpora created by pubget can be stored in a dedicated [**OSF project**](https://osf.io/d2qbh/).
-- Our tool [**labelbuddy**](https://jeromedockes.github.io/labelbuddy/) can be used to manually annotate papers.
-- We have an open repository of [**labelbuddy annotations**](https://litmining.github.io/labelbuddy-annotations/), where researchers can re-use, update, and add new annotations.
-- Our tools [**pubget**](https://neuroquery.github.io/pubget/) and [**pubextract**](https://github.com/neurodatascience/pubextract/) can be used to automatically extract information.
+- Our tool [pubget](https://neuroquery.github.io/pubget/) performs the tasks of collecting documents and extracting their content.
+- The corpora created by pubget can be stored in a dedicated [OSF project](https://osf.io/d2qbh/).
+- Our tool [labelbuddy](https://jeromedockes.github.io/labelbuddy/) can be used to manually annotate papers.
+- We have an open repository of [labelbuddy annotations](https://litmining.github.io/labelbuddy-annotations/), where researchers can re-use, update, and add new annotations.
+- Our tools [pubget](https://neuroquery.github.io/pubget/) and [pubextract](https://github.com/neurodatascience/pubextract/) can be used to automatically extract information.
 - For the step of analyzing the data, each project can have its own code ("custom code"), which we hope would be tracked and shared in its own repository on GitHub or elsewhere ("GitHub repo").
 
-## Tools & resources
-
-### Pubget
+## Pubget
 
 Pubget is a command-line program to obtain and process full-text articles from [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/) (PMC).
 For example, here is how we would obtain all the articles that mention "zika" in their abstract:
@@ -44,7 +40,7 @@ This data is stored in CSV files that are easily loaded to analyze all the artic
 pubget also has some features specific to meta-analysis of neuroimaging studies, such as the extraction of stereotactic coordinates.
 For more details, see the documentation!
 
-### Labelbuddy
+## Labelbuddy
 
 In a text-mining project, we often need some manual annotations.
 For example, if we create a method for automatically extracting information from the text, we need labelled documents at least for validation (evaluating how well the automatic extraction performs).  
@@ -69,7 +65,7 @@ The `--alias zika_papers` tells pubget to create a symlink with a human-readable
 The last 2 commands, which import the papers into a labelbuddy database and then open it in the application, can also be performed from labelbuddy's graphical interface instead of the command-line.
 For more details about labelbuddy, see its [documentation](https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/).
 
-### The labelbuddy-annotations repository
+## The labelbuddy-annotations repository
 
 This is completely optional, but if you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this [repository](https://litmining.github.io/labelbuddy-annotations/).
 This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information). 

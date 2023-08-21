@@ -4,22 +4,8 @@
     --font-mono: "Inconsolata", monospace;
 
     --color-dark: #1d1d1d;
-    --color-light: #fcfbf7;
+    --color-light: #fcfbfa;
     --color-code-bg: #e8e8e8;
-
-    --size-small-4: 0.410rem;
-    --size-small-3: 0.512rem;
-    --size-small-2: 0.640rem;
-    --size-small-1: 0.800rem;
-    --size-0: 1.000rem;
-    --size-1: 1.250rem;
-    --size-2: 1.562rem;
-    --size-3: 1.953rem;
-    --size-4: 2.441rem;
-    --size-5: 3.052rem;
-    --size-6: 3.815rem;
-    --size-7: 4.768rem;
-    --size-8: 5.960rem;
 
     --gutter: var(--size-0);
 }

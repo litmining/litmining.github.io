@@ -1,13 +1,11 @@
-.prose {
-    --wrapper-max-width: 55rem;
-}
-
 .header {
-    padding-top: var(--size-8);
-    padding-bottom: var(--size-4);
-    font-size: var(--size-2);
+    margin-top: var(--leading-2);
+    margin-bottom: var(--leading-2);
+    font-size: var(--size-1);
+    font-style: italic;
 }
 
 .header > h1 {
-    margin-bottom: var(--size-4);
+    font-style: normal;
+    margin-bottom: var(--leading);
 }

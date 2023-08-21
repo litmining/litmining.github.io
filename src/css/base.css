@@ -1,43 +1,39 @@
 body {
     font-family: var(--font-base);
-    font-size: var(--size-1);
+    font-size: var(--size-0);
+    line-height: var(--line-height);
+
     background-color: var(--color-light);
     color: var(--color-dark);
 }
 
 h1,
-h3,
-h3,
-h4 {
-    line-height: 1;
-}
-
-h1 {
-    font-family: var(--font-display);
-    font-weight: bold;
-}
-
 h2,
 h3,
 h4 {
     font-family: var(--font-display);
-    font-weight: bold;
+    line-height: var(--h3-line-height);
 }
 
 h1 {
-    font-size: var(--size-6);
-}
-
-h2 {
     font-size: var(--size-4);
 }
 
+h2,
 h3 {
-    font-size: var(--size-3);
+    margin-block-start: var(--leading);
+    margin-block-end: var(--leading);
+
 }
 
-h4 {
-    font-size: var(--size-2);
+h2 {
+    font-size: var(--size-1);
+}
+
+h3 {
+    font-size: var(--size-1);
+    font-style: italic;
+    font-weight: normal;
 }
 
 code {
@@ -47,6 +43,29 @@ code {
 pre {
     overflow-x: auto;
     background-color: var(--color-code-bg);
-    padding: var(--size-0);
-    border-radius: var(--size-small-4);
+    padding-bottom: var(--leading-half);
+    padding-top: var(--leading-half);
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: var(--size-small-5);
+}
+
+p, ul {
+    margin-top: var(--leading);
+    margin-bottom: var(--leading);
+}
+
+ul {
+    padding-inline-start: 0px;
+    list-style-type: circle;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+}
+
+a :hover {
+
 }
