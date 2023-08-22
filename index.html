@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Set of tools and workflow for easy and efficient text-mining of the biomedical scientific literature." />
     <title>Mining the biomedical scientific literature</title>
-    <link rel="stylesheet" href="/css/global.css?63320c2136d2b95b" />
+    <link rel="stylesheet" href="/css/global.css?78dc227886f5f55e" />
 </head>
 
 <body>
@@ -91,12 +91,12 @@ We hope to help you streamline the first tedious steps of your text-mining proje
     </div>
 </div>
 <ul>
-<li>Our tool <a href="https://neuroquery.github.io/pubget/">pubget</a> performs the tasks of collecting documents and extracting their content.</li>
+<li><a href="https://neuroquery.github.io/pubget/">Pubget</a> downloads articles from <a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central</a> and extracts their content.</li>
 <li>The corpora created by pubget can be stored in a dedicated <a href="https://osf.io/d2qbh/">OSF project</a>.</li>
-<li>Our tool <a href="https://jeromedockes.github.io/labelbuddy/">labelbuddy</a> can be used to manually annotate papers.</li>
-<li>We have an open repository of <a href="https://litmining.github.io/labelbuddy-annotations/">labelbuddy annotations</a>, where researchers can re-use, update, and add new annotations.</li>
-<li>Our tools <a href="https://neuroquery.github.io/pubget/">pubget</a> and <a href="https://github.com/neurodatascience/pubextract/">pubextract</a> can be used to automatically extract information.</li>
-<li>For the step of analyzing the data, each project can have its own code (“custom code”), which we hope would be tracked and shared in its own repository on GitHub or elsewhere (“GitHub repo”).</li>
+<li><a href="https://jeromedockes.github.io/labelbuddy/">Labelbuddy</a> can be used to manually annotate papers.</li>
+<li>The <a href="https://litmining.github.io/labelbuddy-annotations/">labelbuddy-annotations</a> repository is a place to store, share, and analyze annotations.</li>
+<li><a href="https://neuroquery.github.io/pubget/">Pubget</a> and <a href="https://github.com/neurodatascience/pubextract/">pubextract</a> can automatically extract some information from articles.</li>
+<li>For dedicated information extraction and for analysis, each project can have its own code (“custom code”), which can be tracked and shared in its own repository on GitHub or elsewhere (“GitHub repo”).</li>
 </ul>
 <h2>Pubget</h2>
 <p>Pubget is a command-line program to obtain and process full-text articles from <a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central</a> (PMC).
@@ -113,34 +113,68 @@ For more details, see the documentation!</p>
 For example, if we create a method for automatically extracting information from the text, we need labelled documents at least for validation (evaluating how well the automatic extraction performs).<br>
 <a href="https://jeromedockes.github.io/labelbuddy/">Labelbuddy</a> is a simple, effective and flexible tool for performing this task.</p>
 <p>Conveniently, pubget can generate JSON files containing the text it downloaded, simply by adding the <code>--labelbuddy</code> flag to the pubget command.
-Therefore, we can start annotating our articles very easily:</p>
-<pre><code>pubget run -q &quot;zika[Abstract]&quot; \
-           --labelbuddy        \
-           --alias zika_papers \
-           ./pubget_data
-
-cd ./pubget_data/zika_papers/subset_allArticles_labelbuddyData/
-
-labelbuddy ./zika.labelbuddy --import-docs documents_00001.jsonl
-labelbuddy ./zika.labelbuddy
-</code></pre>
-<p>The <code>--alias zika_papers</code> tells pubget to create a symlink with a human-readable name for the directory in which it stores its output.
-The last 2 commands, which import the papers into a labelbuddy database and then open it in the application, can also be performed from labelbuddy’s graphical interface instead of the command-line.
+Therefore, we can start annotating our articles very easily.
 For more details about labelbuddy, see its <a href="https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/">documentation</a>.</p>
 <h2>The labelbuddy-annotations repository</h2>
-<p>This is completely optional, but if you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this <a href="https://litmining.github.io/labelbuddy-annotations/">repository</a>.
+<p>If you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this <a href="https://litmining.github.io/labelbuddy-annotations/">repository</a>.
 This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information).
 As a bonus, you get a few utilities to work with the annotations, and yo can showcase your project in the repository’s documentation.</p>
 <h2>Workflow</h2>
 <p>Data collection, labelling and cleaning tend to be messy.
 Still, we want the process to be as streamlined, transparent and reproducible as possible.
 Here is an overview of the organization we suggest; more technical details are provided in the labelbuddy-annotations repository’s <a href="https://litmining.github.io/labelbuddy-annotations/contributing_to_this_repository.html">documentation</a>.</p>
-<h3>Visit <a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central</a> to select a query</h3>
+<h3>Define a query</h3>
+<p>Visit <a href="https://www.ncbi.nlm.nih.gov/pmc/">PubMed Central</a> to help you choose the query (search terms) you will use to select which articles to download.
+You can follow the <a href="https://www.ncbi.nlm.nih.gov/pmc/advanced">“Advanced”</a> link to build a query with an advanced search dialogue.
+Once you are satisfied with the results returned, copy the query that appears in the search bar or in the “Search details” box on the right and write it in a text file, say <code>query.txt</code>.</p>
 <h3>Download &amp; process articles with pubget</h3>
-<h3>Store the full pubget output on <a href="https://osf.io/d2qbh/">OSF</a></h3>
-<h3>Add a project to the labelbuddy-annotations repository</h3>
+<p>Now you have your query you can download all the corresponding articles with pubget using the <code>--query_file</code> option (or the shorter version <code>-f</code>).
+You must also specify the directory in which pubget will store all its data; here we use <code>pubget_data</code>.
+Finally, we pass the <code>--labelbuddy</code> option to tell <code>pubget</code> to generate JSON files that we can later import into labelbuddy.</p>
+<pre><code>pubget run --labelbuddy -f ./query.txt ./pubget_data/
+</code></pre>
+<p>There are several other useful options, such as <code>--n_jobs</code> to run the content extraction in parallel or <code>--alias</code> to create a symbolic link with a human-readable name to the directory pubget will create for our query:</p>
+<pre><code>pubget run --labelbuddy --n_jobs 4 --alias &quot;my_project&quot; -f ./query.txt ./pubget_data/
+</code></pre>
+<p>The pubget <a href="https://neuroquery.github.io/pubget/">documentation</a> provides a detailed description of all the options and outputs, and <code>pubget --help</code> produces a summary.</p>
+<h3>Store the full pubget output online</h3>
+<p>Pubget will create a directory containing all the articles that match your query on PMC, the text and information it extracted, and the labelbuddy files.
+To make sure you keep and are able to share all relevant data for your project, we recommend creating a (Zip or Tar) archive from this directory and uploading it to an online platform such as <a href="https://osf.io/">OSF</a> (“Open Science Framework”).</p>
+<h3>Manually annotate some documents</h3>
+<p>Most likely, your project will involve some kind of information extraction – for example you may need to extract information about the study’s participants, drug or disease names, etc.
+A wide range of techniques and tools are at your disposal, and at this point you are getting to the interesting part of your project.
+But regardless of the approach you choose, you will need to verify that it produces satisfying results on your corpus of text.
+The most common way of assessing this is to compare its output to “ground truth” labels from a human expert (probably yourself!).
+Also, if the information you are looking for is difficult to extract automatically and if your corpus is small, you might rely fully on manual labelling instead of using automated methods.</p>
+<p>Fortunately, labelling the documents we just downloaded will be very easy.
+Pubget created a subdirectory called <code>subset_allArticles_labelbuddyData</code>, which contains files named <code>documents_00001.jsonl</code>, <code>documents_00002.jsonl</code> etc.
+Each of these files can be imported into labelbuddy and contains a batch of 200 articles.
+Inside that directory, create a labelbuddy database for your project and import a first batch of articles.
+This can be done from labelbuddy’s graphical interface or with the following command:</p>
+<pre><code># create database and import documents
+labelbuddy myproject.labelbuddy --import-docs ./documents_00001.jsonl
+# launch labelbuddy
+labelbuddy myproject.labelbuddy
+</code></pre>
+<p>Create some labels and start annotating documents!
+You can refer to labelbuddy’s <a href="https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/">documentation</a> (also available through the “Help” menu in labelbuddy).</p>
+<p>Once you have annotated some documents, export the annotations to a JSON file (either from the “Import &amp; Export menu”) or with the <code>labelbuddy export-docs</code> command.
+This will allow you to track the annotations in Git, but also to easily read them with tools such as Python or R for your analyses.</p>
+<h3>Consider adding a project to the labelbuddy-annotations repository</h3>
+<p>We encourage you to share any annotations you create in the labelbuddy-annotations <a href="https://litmining.github.io/labelbuddy-annotations/">repository</a>.
+To do so, you simply need to fork the repository, and add a subdirectory in <code>projects</code> in which you store the labelbuddy file you are annotating, the labels you created in labelbuddy and your annotations.
+The repository’s
+<a href="https://litmining.github.io/labelbuddy-annotations/contributing_to_this_repository.html">documentation</a>
+provides all the details to get started.</p>
+<p>Adding your annotations to this repository has several advantages.
+It makes your annotations visible online, easy to re-use and combine with other projects.
+The repository also contains some utilities to work with the annotations.
+For example, it can compile a CSV file that combines all the annotations from all projects, along with information about the articles.
+See the documentation on <a href="https://litmining.github.io/labelbuddy-annotations/using_this_repository.html">using the repository</a> for details.</p>
 <h3>Use your text corpus and manual annotations for analysis</h3>
-<h3>Distribute your code &amp; analysis</h3>
+<p>Now you have your text corpus and your manual annotations in convenient formats, ready to load with your favorite scientific tools and analyze.
+The real work can begin!</p>
+<!-- ### Distribute your code & analysis -->
 
             </article>
     </main>
