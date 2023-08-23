@@ -66,6 +66,6 @@ a {
     text-decoration-thickness: from-font;
 }
 
-a :hover {
-
+.acronym {
+    font-variant-caps: all-small-caps;
 }
