@@ -12,11 +12,12 @@ h2,
 h3,
 h4 {
     font-family: var(--font-display);
-    line-height: var(--h3-line-height);
+    font-weight: bold;
 }
 
 h1 {
     font-size: var(--h1-size);
+    line-height: var(--h2-line-height);
 }
 
 h2,
@@ -27,13 +28,12 @@ h3 {
 }
 
 h2 {
-    font-size: var(--size-1);
+    font-size: var(--h2-size);
+    line-height: var(--h2-line-height);
 }
 
 h3 {
-    font-size: var(--size-1);
-    font-style: italic;
-    font-weight: normal;
+    font-size: var(--size-0);
 }
 
 code {

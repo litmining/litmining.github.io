@@ -10,7 +10,6 @@ def get_variables(scale_base):
 
     variables = {}
     variables["line-height"] = line_height
-    variables["h3-line-height"] = line_height / scale_ratio
     leading = scale_base * line_height
     variables["leading"] = f"{leading:.3f}rem"
     variables["leading-half"] = f"{leading /2 :.3f}rem"
@@ -22,6 +21,9 @@ def get_variables(scale_base):
         val = scale_base * scale_ratio**step
         step_name = f"size-small-{abs(step)}" if step < 0 else f"size-{step}"
         variables[step_name] = f"{val:.3f}rem"
+
+    variables["h2-line-height"] = line_height / scale_ratio
+    variables["h2-size"] = variables["size-1"]
 
     variables["border-radius"] = variables["size-small-5"]
     return variables
