@@ -56,7 +56,7 @@ p, ul {
 }
 
 ul {
-    padding-inline-start: 0px;
+    padding-left: var(--list-padding);
     list-style-type: circle;
 }
 

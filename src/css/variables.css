@@ -7,5 +7,13 @@
     --color-light: #fcfbfa;
     --color-code-bg: #e8e8e8;
 
-    --gutter: var(--size-1);
+    --gutter: var(--size-small-3);
+    --list-padding: 40px;
+}
+
+@media screen and (min-width: 60em) {
+    :root {
+        --gutter: var(--size-1);
+        --list-padding: 0;
+    }
 }
