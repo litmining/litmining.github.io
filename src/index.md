@@ -1,6 +1,8 @@
 ---
 title: Mining the biomedical scientific literature
-summary: We present a set of tools and resources to easily collect and prepare data for text-mining the bio­medical scientific literature. Skip the tedious data collection and wrangling and focus on information extraction and analysis! 
+summary: "We present a set of tools to easily collect and prepare biomedical publications for text-mining.
+  Skip the tedious data collection and wrangling.
+  Focus on analyzing the text."
 description: Set of tools and workflow for easy and efficient text-mining of the biomedical scientific literature.
 layout: layouts/home.html
 ---
@@ -11,7 +13,7 @@ A text-mining project involves several steps: finding relevant articles, downloa
 More often than not, the first steps of this process -- data collection and curation -- take a frustrating amount of time and effort, and are performed in a way that is difficult to reproduce or extend later.
 
 Here, we describe useful tools and a simple workflow that make text-mining of the biomedical literature easier, more transparent and more fun.
-We hope to help you streamline the first tedious steps of your text-mining project and focus on the part you care about: extracting and analyzing high-quality information from text, rather than downloading, parsing and pre-processing thousands of articles. 
+We hope to help you streamline the first tedious steps of your text-mining project and focus on the part you care about: extracting and analyzing high-quality information from text, rather than downloading, parsing and pre-processing thousands of articles.
 
 
 Here is an overview of our suggested workflow, along with the tools we offer and possible places to store the output of each step.
@@ -39,13 +41,12 @@ After downloading all the articles, pubget extracts their content, including the
 This data is stored in CSV files that are easily loaded to analyze all the articles jointly.
 
 pubget also has some features specific to meta-analysis of neuroimaging studies, such as the extraction of stereotactic coordinates.
-For more details, see the documentation!
 
 ## Labelbuddy
 
 In a text-mining project, we often need some manual annotations.
-For example, if we create a method for automatically extracting information from the text, we need labelled documents at least for validation (evaluating how well the automatic extraction performs).  
-[Labelbuddy](https://jeromedockes.github.io/labelbuddy/) is a simple, effective and flexible tool for performing this task. 
+For example, if we create a method for automatically extracting information from the text, we need labelled documents at least for validation (evaluating how well the automatic extraction performs).
+[Labelbuddy](https://jeromedockes.github.io/labelbuddy/) is a simple, effective and flexible tool for performing this task.
 
 Conveniently, pubget can generate JSON files containing the text it downloaded, simply by adding the `--labelbuddy` flag to the pubget command.
 Therefore, we can start annotating our articles very easily.
@@ -54,7 +55,7 @@ For more details about labelbuddy, see its [documentation](https://jeromedockes.
 ## The labelbuddy-annotations repository
 
 If you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this [repository](https://litmining.github.io/labelbuddy-annotations/).
-This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information). 
+This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information).
 As a bonus, you get a few utilities to work with the annotations, and yo can showcase your project in the repository's documentation.
 
 ## Workflow
@@ -67,7 +68,7 @@ Here is an overview of the organization we suggest; more technical details are p
 
 Visit [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/) to help you choose the query (search terms) you will use to select which articles to download.
 You can follow the ["Advanced"](https://www.ncbi.nlm.nih.gov/pmc/advanced) link to build a query with an advanced search dialogue.
-Once you are satisfied with the results returned, copy the query that appears in the search bar or in the "Search details" box on the right and write it in a text file, say `query.txt`. 
+Once you are satisfied with the results returned, copy the query that appears in the search bar or in the "Search details" box on the right and write it in a text file, say `query.txt`.
 
 ### Download & process articles with pubget
 
@@ -96,7 +97,7 @@ To make sure you keep and are able to share all relevant data for your project, 
 Most likely, your project will involve some kind of information extraction -- for example you may need to extract information about the study's participants, drug or disease names, etc.
 A wide range of techniques and tools are at your disposal, and at this point you are getting to the interesting part of your project.
 But regardless of the approach you choose, you will need to verify that it produces satisfying results on your corpus of text.
-The most common way of assessing this is to compare its output to "ground truth" labels from a human expert (probably yourself!).
+The most common way of assessing this is to compare its output to "ground truth" labels from a human expert (probably yourself).
 Also, if the information you are looking for is difficult to extract automatically and if your corpus is small, you might rely fully on manual labelling instead of using automated methods.
 
 Fortunately, labelling the documents we just downloaded will be very easy.
@@ -111,7 +112,7 @@ labelbuddy myproject.labelbuddy --import-docs ./documents_00001.jsonl
 # launch labelbuddy
 labelbuddy myproject.labelbuddy
 ```
-Create some labels and start annotating documents!
+Now you can create some labels and start annotating documents.
 You can refer to labelbuddy's [documentation](https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/) (also available through the "Help" menu in labelbuddy).
 
 Once you have annotated some documents, export the annotations to a JSON file (either from the "Import & Export menu") or with the `labelbuddy export-docs` command.
@@ -137,4 +138,3 @@ Now you have your text corpus and your manual annotations in convenient formats,
 The real work can begin!
 
 <!-- ### Distribute your code & analysis -->
- 
