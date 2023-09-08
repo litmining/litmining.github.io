@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Set of tools and workflow for easy and efficient text-mining of the biomedical scientific literature." />
     <title>Mining the biomedical scientific literature</title>
-    <link rel="stylesheet" href="/css/global.css?653fb8e7433a4b6f" />
+    <link rel="stylesheet" href="/css/global.css?22e5ff47230bc89f" />
 </head>
 
 <body>
@@ -117,7 +117,7 @@ For more details about labelbuddy, see its <a href="https://jeromedockes.github.
 <h2>The labelbuddy-annotations repository</h2>
 <p>If you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this <a href="https://litmining.github.io/labelbuddy-annotations/">repository</a>.
 This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information).
-As a bonus, you get a few utilities to work with the annotations, and yo can showcase your project in the repository’s documentation.</p>
+As a bonus, you get a few utilities to work with the annotations, and you can showcase your project in the repository’s documentation.</p>
 <h2>Workflow</h2>
 <p>Data collection, labelling and cleaning tend to be messy.
 Still, we want the process to be as streamlined, transparent and reproducible as possible.
@@ -138,7 +138,7 @@ Finally, we pass the <code>--labelbuddy</code> option to tell <code>pubget</code
 <p>The pubget <a href="https://neuroquery.github.io/pubget/">documentation</a> provides a detailed description of all the options and outputs, and <code>pubget --help</code> produces a summary.</p>
 <h3>Store the full pubget output online</h3>
 <p>Pubget will create a directory containing all the articles that match your query on <abbr class='acronym'>PMC</abbr>, the text and information it extracted, and the labelbuddy files.
-To make sure you keep and are able to share all relevant data for your project, we recommend creating a (Zip or Tar) archive from this directory and uploading it to an online platform such as <a href="https://osf.io/"><abbr class='acronym'>OSF</abbr></a> (“Open Science Framework”).</p>
+To make sure you keep and are able to share all relevant data for your project, we recommend creating a (<code>.tar.gz</code>) archive from this directory and uploading it to an online platform such as <a href="https://osf.io/"><abbr class='acronym'>OSF</abbr></a> (“Open Science Framework”).</p>
 <h3>Manually annotate some documents</h3>
 <p>Most likely, your project will involve some kind of information extraction – for example you may need to extract information about the study’s participants, drug or disease names, etc.
 A wide range of techniques and tools are at your disposal, and at this point you are getting to the interesting part of your project.
@@ -157,7 +157,7 @@ labelbuddy myproject.labelbuddy
 </code></pre>
 <p>Now you can create some labels and start annotating documents.
 You can refer to labelbuddy’s <a href="https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/">documentation</a> (also available through the “Help” menu in labelbuddy).</p>
-<p>Once you have annotated some documents, export the annotations to a <abbr class='acronym'>JSON</abbr> file (either from the “Import &amp; Export menu”) or with the <code>labelbuddy export-docs</code> command.
+<p>Once you have annotated some documents, export the annotations to a <abbr class='acronym'>JSON</abbr> file (either from the “Import &amp; Export menu” or with the <code>labelbuddy export-docs</code> command) .
 This will allow you to track the annotations in Git, but also to easily read them with tools such as Python or R for your analyses.</p>
 <h3>Consider adding a project to the labelbuddy-annotations repository</h3>
 <p>We encourage you to share any annotations you create in the labelbuddy-annotations <a href="https://litmining.github.io/labelbuddy-annotations/">repository</a>.
