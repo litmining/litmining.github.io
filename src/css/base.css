@@ -48,6 +48,7 @@ pre {
     padding-left: 1em;
     padding-right: 1em;
     border-radius: var(--size-small-5);
+    margin: 0;
 }
 
 p, ul {

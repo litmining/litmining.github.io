@@ -56,7 +56,7 @@ For more details about labelbuddy, see its [documentation](https://jeromedockes.
 
 If you annotate biomedical text with labelbuddy, we encourage you to share the annotations in this [repository](https://litmining.github.io/labelbuddy-annotations/).
 This will facilitate re-use of annotations in different analyses, and collaboration across projects (eg different projects annotating the same articles with different types of information).
-As a bonus, you get a few utilities to work with the annotations, and yo can showcase your project in the repository's documentation.
+As a bonus, you get a few utilities to work with the annotations, and you can showcase your project in the repository's documentation.
 
 ## Workflow
 
@@ -90,7 +90,7 @@ The pubget [documentation](https://neuroquery.github.io/pubget/) provides a deta
 ### Store the full pubget output online
 
 Pubget will create a directory containing all the articles that match your query on PMC, the text and information it extracted, and the labelbuddy files.
-To make sure you keep and are able to share all relevant data for your project, we recommend creating a (Zip or Tar) archive from this directory and uploading it to an online platform such as [OSF](https://osf.io/) ("Open Science Framework").
+To make sure you keep and are able to share all relevant data for your project, we recommend creating a (`.tar.gz`) archive from this directory and uploading it to an online platform such as [OSF](https://osf.io/) ("Open Science Framework").
 
 ### Manually annotate some documents
 
@@ -115,7 +115,7 @@ labelbuddy myproject.labelbuddy
 Now you can create some labels and start annotating documents.
 You can refer to labelbuddy's [documentation](https://jeromedockes.github.io/labelbuddy/labelbuddy/current/documentation/) (also available through the "Help" menu in labelbuddy).
 
-Once you have annotated some documents, export the annotations to a JSON file (either from the "Import & Export menu") or with the `labelbuddy export-docs` command.
+Once you have annotated some documents, export the annotations to a JSON file (either from the "Import & Export menu" or with the `labelbuddy export-docs` command) .
 This will allow you to track the annotations in Git, but also to easily read them with tools such as Python or R for your analyses.
 
 ### Consider adding a project to the labelbuddy-annotations repository
