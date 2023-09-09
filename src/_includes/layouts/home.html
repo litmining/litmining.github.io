@@ -19,6 +19,8 @@
                 </p>
             </header>
             <article class="wrapper region">
+
+                {% include "partials/tool_cards.html" %}
                 {{ content | acronyms | safe }}
             </article>
     </main>

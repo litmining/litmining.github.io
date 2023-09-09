@@ -1,0 +1,25 @@
+{
+    "items": [{
+            "name": "Pubget",
+            "summary": "is a command-line tool to download articles from PubMed Central, extract their content and prepare it for analysis.",
+            "illustration": "<pre><code>pubget run --query \"MRI[Abstract]\" ./pubget_data</code></pre>",
+        "logo": "images/pubget.svg",
+        "url": "https://neuroquery.github.io/pubget/"
+
+        },
+        {
+            "name": "Labelbuddy",
+            "summary": "is an effective and flexible tool for labelling text.",
+            "image": "images/screenshot_labelbuddy_small.png",
+            "logo": "images/labelbuddy-animated.svg",
+            "url": "https://jeromedockes.github.io/labelbuddy/"
+        },
+        {
+            "name": "labelbuddy-annotations",
+            "summary": "is a repository of annotations created with labelbuddy, on documents collected with pubget.",
+            "image": "images/labelbuddy-annotations-word-cloud.png",
+            "logo": "images/labelbuddy-annotations.svg",
+            "url": "https://litmining.github.io/labelbuddy-annotations/"
+        }
+    ]
+}

@@ -7,6 +7,7 @@ description: Set of tools and workflow for easy and efficient text-mining of the
 layout: layouts/home.html
 ---
 
+
 The biomedical literature comprises millions of articles and is expanding quickly.
 Due to this overwhelming size, using it efficiently often involves systematic or automated methods, collectively known as _text-mining_.
 A text-mining project involves several steps: finding relevant articles, downloading them, extracting their text, extracting information from the text and finally running the main analysis which yields scientific insights.

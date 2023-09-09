@@ -5,4 +5,5 @@
 @import 'base.css';
 @import 'utilities.css';
 @import 'blocks.css';
-@import 'workflow_figure.css'
+@import 'workflow_figure.css';
+@import 'tool_cards.css';
