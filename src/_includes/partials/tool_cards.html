@@ -1,20 +1,19 @@
 <div class="tool-card-set">
     {% for tool in tools.items %}
     <a class="tool-card-wrapper-link" href="{{ tool.url }}">
-    <div class="tool-card">
-        <p class="tool-description">
-            <span class="tool-name">{{ tool.name }}</span>
-        {{ tool.summary }}
-        </p>
-        <img class="tool-logo" src="{{ tool.logo }}" />
-        <div class="tool-illustration">
-        {% if tool.image %}
-        <img src="{{ tool.image }}" />
-        {% else %}
-        {{ tool.illustration | safe }}
-        {% endif %}
+        <div class="tool-card">
+            <div class="tool-description">
+                <img class="tool-logo" src="{{ tool.logo }}" />
+                <span class="tool-name">{{ tool.name }}</span> {{ tool.summary }}
+            </div>
+            <div class="tool-illustration">
+                {% if tool.image %}
+                <img src="{{ tool.image }}" />
+                {% else %}
+                {{ tool.illustration | safe }}
+                {% endif %}
+            </div>
         </div>
-    </div>
     </a>
     {% endfor %}
 </div>

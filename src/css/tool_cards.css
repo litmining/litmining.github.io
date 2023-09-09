@@ -23,51 +23,47 @@
     text-decoration: none;
 }
 
-.tool-card {
-    font-family: var(--font-mono);
-    display: grid;
-    grid-template-columns: 0.7fr 0.3fr;
-    grid-template-areas: "description logo"
-        "illustration illustration";
-    row-gap: var(--leading-half);
+
+.tool-card .tool-description {
+    font-size: var(--size-0);
+    background-color: #ffffff;
 }
 
-@media screen and (min-width: 60em) {
-    .tool-card {
-        grid-template-columns: 0.75fr 0.25fr;
-    }
-}
 
 .tool-card-set>*+* {
     margin-block-start: var(--leading);
 }
 
-.tool-card .tool-description {
-    grid-area: description;
-    align-self: center;
-}
 
 .tool-card .tool-logo {
-    grid-area: logo;
-    align-self: center;
+    float: right;
+    max-width: 30%;
+}
+
+@media screen and (min-width: 60em) {
+    .tool-card .tool-logo {
+        max-width: 20%;
+    }
 }
 
 .tool-card .tool-illustration {
-    grid-area: illustration;
+    clear: both;
 }
 
 
-
 .tool-card .tool-name {
-    font-weight: 800;
-    font-size: var(--size-1);
+    font-weight: bold;
+    font-size: var(--h2-size);
+    line-height: var(--h2-line-height);
 }
 
 .tool-description {
     padding-left: var(--size-small-1);
-    padding-right: 0;
+    padding-right: var(--size-small-1);
+    padding-top: var(--leading-half);
+    padding-bottom: var(--leading-half);
 }
 
 .tool-logo {
-    padding: var(--size-small-4);
+    padding: var(--size-small-5);
 }
