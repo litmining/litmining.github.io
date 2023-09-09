@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Set of tools and workflow for easy and efficient text-mining of the biomedical scientific literature." />
     <title>Mining the biomedical scientific literature</title>
-    <link rel="stylesheet" href="/css/global.css?22e5ff47230bc89f" />
+    <link rel="stylesheet" href="/css/global.css?874427b2aa2717f0" />
 </head>
 
 <body>
@@ -19,6 +19,56 @@
                 </p>
             </header>
             <article class="wrapper region">
+
+                <div class="tool-card-set">
+    
+    <a class="tool-card-wrapper-link" href="https://neuroquery.github.io/pubget/">
+    <div class="tool-card">
+        <p class="tool-description">
+            <span class="tool-name">Pubget</span>
+        is a command-line tool to download articles from PubMed Central, extract their content and prepare it for analysis.
+        </p>
+        <img class="tool-logo" src="images/pubget.svg" />
+        <div class="tool-illustration">
+        
+        <pre><code>pubget run --query "MRI[Abstract]" ./pubget_data</code></pre>
+        
+        </div>
+    </div>
+    </a>
+    
+    <a class="tool-card-wrapper-link" href="https://jeromedockes.github.io/labelbuddy/">
+    <div class="tool-card">
+        <p class="tool-description">
+            <span class="tool-name">Labelbuddy</span>
+        is an effective and flexible tool for labelling text.
+        </p>
+        <img class="tool-logo" src="images/labelbuddy-animated.svg" />
+        <div class="tool-illustration">
+        
+        <img src="images/screenshot_labelbuddy_small.png" />
+        
+        </div>
+    </div>
+    </a>
+    
+    <a class="tool-card-wrapper-link" href="https://litmining.github.io/labelbuddy-annotations/">
+    <div class="tool-card">
+        <p class="tool-description">
+            <span class="tool-name">labelbuddy-annotations</span>
+        is a repository of annotations created with labelbuddy, on documents collected with pubget.
+        </p>
+        <img class="tool-logo" src="images/labelbuddy-annotations.svg" />
+        <div class="tool-illustration">
+        
+        <img src="images/labelbuddy-annotations-word-cloud.png" />
+        
+        </div>
+    </div>
+    </a>
+    
+</div>
+
                 <p>The biomedical literature comprises millions of articles and is expanding quickly.
 Due to this overwhelming size, using it efficiently often involves systematic or automated methods, collectively known as <em>text-mining</em>.
 A text-mining project involves several steps: finding relevant articles, downloading them, extracting their text, extracting information from the text and finally running the main analysis which yields scientific insights.
