@@ -9,14 +9,14 @@
         },
         {
             "name": "Labelbuddy",
-            "summary": "is an effective and flexible tool for labelling text.",
+            "summary": "is an effective and flexible tool for labelling text. It is a local, lightweight application, easy to install, relies on standard formats and offers a graphical and a command-line interface",
             "image": "images/screenshot_labelbuddy_small.png",
             "logo": "images/labelbuddy-animated.svg",
             "url": "https://jeromedockes.github.io/labelbuddy/"
         },
         {
-            "name": "labelbuddy-annotations",
-            "summary": "is a repository of annotations created with labelbuddy, on documents collected with pubget.",
+            "name": "Labelbuddy-annotations",
+            "summary": "is a repository of annotations created with labelbuddy, on documents collected with pubget. It contains thousands of annotations and Python utilities to facilitate their use.",
             "image": "images/labelbuddy-annotations-word-cloud.png",
             "logo": "images/labelbuddy-annotations.svg",
             "url": "https://litmining.github.io/labelbuddy-annotations/"
